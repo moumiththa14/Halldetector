@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exam Seat Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body >
+  <div class="container">
+    <h1>Exam Details Form</h1>
+    <form id="examForm">
+      <label for="regno">Register Number:</label>
+      <input type="text" id="regno" required>
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" required>
+
+      <button type="submit">Submit</button>
+      <bton ty
+    </form>
+
+    <div class="result" id="resultBox" style="display: none;">
+      <h2>Your Exam Seat</h2>
+      <p><strong>Hall Number:</strong> <span id="hall">H-101</span></p>
+      <p><strong>Seat Number:</strong> <span id="seat">S-12</span></p>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('examForm');
+    const resultBox = document.getElementById('resultBox');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Dummy result, can be changed
+      resultBox.style.display = "block";
+    });
+  </script>
+</body>
+</html>
+
